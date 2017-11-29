@@ -1,1 +1,0 @@
-lamb wave dispersion curves for composite laminate
