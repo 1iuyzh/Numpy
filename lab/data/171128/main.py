@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import csv
 
-with open('lab/data/171128/plate2/10p50mm20mm0mmX/07.csv', newline='') as csvfile:
+with open('lab/data/171128/plate2/100Vpp10p50mm20mm0mmX/07.csv', newline='') as csvfile:
     reader = csv.reader(csvfile)
     rows = [row for row in reader]
     data = np.array(rows[2:])[:,:3].astype(float)
@@ -14,7 +14,7 @@ with open('lab/data/171128/plate2/10p50mm20mm0mmX/07.csv', newline='') as csvfil
     plt.legend(['ch1', 'ch2'])
     plt.show()
 
-with open('lab/data/171128/plate2/10p50mm20mm0mmX/14.csv', newline='') as csvfile:
+with open('lab/data/171128/plate2/100Vpp10p50mm20mm0mmX/14.csv', newline='') as csvfile:
     reader = csv.reader(csvfile)
     rows = [row for row in reader]
     data = np.array(rows[2:])[:,:3].astype('float64')
