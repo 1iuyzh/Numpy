@@ -1,1 +1,1 @@
-lamb wave dispersion curves for composite laminate
+Air-coupled ultrasonic nondestructive detection
