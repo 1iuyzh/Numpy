@@ -14,7 +14,7 @@ dfont = matplotlib.font_manager.FontProperties(fname='C:/Windows/Fonts/YaHei Con
 
 root = 'lab/data/171128/plate2/100Vpp10p50mm20mm40mmX'
 
-with open(os.path.join(root, '14.csv')) as csvfile:
+with open(os.path.join(root, '17.csv')) as csvfile:
     reader = csv.reader(csvfile)
     rows = [row for row in reader]
 rows = np.array(rows[2:])[:,:3].astype('float64')
@@ -22,6 +22,14 @@ t = 0.5 * rows[:, 0]
 r = 1000 * rows[:, 1]
 s = 1000 * rows[:, 2]
 
+# 通过找最大值决定群速度计算终止时间的计算
+max = 0
+for i in range(380*2):
+    if max < s[i]:
+        max = s[i]
+print(max)
+
+plt.plot(t, r)
 plt.plot(t, s)
 plt.title('信号', fontproperties=dfont)
 plt.xlabel('time/us', fontproperties=dfont)

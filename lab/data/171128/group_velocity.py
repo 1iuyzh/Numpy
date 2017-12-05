@@ -40,7 +40,7 @@ angle = []
 dfont = matplotlib.font_manager.FontProperties(fname='C:/Windows/Fonts/YaHei Consolas Hybrid.ttf')
 
 root = 'lab/data/171128/plate2/100Vpp10p50mm20mm40mmX'  # 修改路径
-for i in os.listdir(root):
+for i in ['13.csv', '14.csv', '15.csv']:
     angle.append(int(i.split('.')[0]))
     with open(os.path.join(root, i)) as csvfile:
         reader = csv.reader(csvfile)
@@ -55,9 +55,9 @@ t_start = 0
 t_end = 0
 for (t, r, s, a) in zip(time, ref, sig, angle):
     for (pt, pr, ps) in zip(t, r, s):
-        if (pr > 50) & (t_start == 0):
+        if (pr > 50) and (t_start == 0):
             t_start = pt
-        if (ps > 50) & (t_end == 0):
+        if (ps > 30) and (t_end == 0):
             t_end = pt
     if (t_end > t_start):
         distance = (50e-3+30e-3*2)-(2*45e-3*math.tan(a*np.pi/180)) # 单位m 修改45
@@ -69,8 +69,7 @@ for (t, r, s, a) in zip(time, ref, sig, angle):
     t_end = 0
 
 #print(vg)
-print(average(vg))
-print(deviation(vg))
+print(average(vg), deviation(vg))
 
 ########################
 ## 3cm 40mm
@@ -83,7 +82,7 @@ angle = []
 dfont = matplotlib.font_manager.FontProperties(fname='C:/Windows/Fonts/YaHei Consolas Hybrid.ttf')
 
 root = 'lab/data/171128/plate2/100Vpp10p50mm30mm40mmX'
-for i in os.listdir(root):
+for i in ['13.csv', '14.csv', '15.csv']:
     angle.append(int(i.split('.')[0]))
     with open(os.path.join(root, i)) as csvfile:
         reader = csv.reader(csvfile)
@@ -98,9 +97,9 @@ t_start = 0
 t_end = 0
 for (t, r, s, a) in zip(time, ref, sig, angle):
     for (pt, pr, ps) in zip(t, r, s):
-        if (pr > 50) & (t_start == 0):
+        if (pr > 50) and (t_start == 0):
             t_start = pt
-        if (ps > 50) & (t_end == 0):
+        if (ps > 50) and (t_end == 0):
             t_end = pt
     if (t_end > t_start):
         distance = (50e-3+30e-3*2)-(2*55e-3*math.tan(a*np.pi/180))
@@ -112,8 +111,7 @@ for (t, r, s, a) in zip(time, ref, sig, angle):
     t_end = 0
 
 #print(vg)
-print(average(vg))
-print(deviation(vg))
+print(average(vg), deviation(vg))
 
 ########################
 ## 2cm 0mm
@@ -126,7 +124,7 @@ angle = []
 dfont = matplotlib.font_manager.FontProperties(fname='C:/Windows/Fonts/YaHei Consolas Hybrid.ttf')
 
 root = 'lab/data/171128/plate2/100Vpp10p50mm20mm0mmX'
-for i in os.listdir(root):
+for i in ['13.csv', '14.csv', '15.csv']:
     angle.append(int(i.split('.')[0]))
     with open(os.path.join(root, i)) as csvfile:
         reader = csv.reader(csvfile)
@@ -141,9 +139,9 @@ t_start = 0
 t_end = 0
 for (t, r, s, a) in zip(time, ref, sig, angle):
     for (pt, pr, ps) in zip(t, r, s):
-        if (pr > 50) & (t_start == 0):
+        if (pr > 50) and (t_start == 0):
             t_start = pt
-        if (ps > 50) & (t_end == 0):
+        if (ps > 50) and (t_end == 0):
             t_end = pt
     if (t_end > t_start):
         distance = (50e-3+30e-3*2)-(2*45e-3*math.tan(a*np.pi/180))
@@ -154,5 +152,4 @@ for (t, r, s, a) in zip(time, ref, sig, angle):
     t_start = 0
     t_end = 0
 
-print(average(vg))
-print(deviation(vg))
+print(average(vg), deviation(vg))
