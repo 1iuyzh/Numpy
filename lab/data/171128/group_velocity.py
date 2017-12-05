@@ -65,6 +65,8 @@ for (t, r, s, a) in zip(time, ref, sig, angle):
         vg.append(distance/dt)
     else:
         vg.append(0)
+    t_start = 0
+    t_end = 0
 
 #print(vg)
 print(average(vg))
@@ -106,6 +108,8 @@ for (t, r, s, a) in zip(time, ref, sig, angle):
         vg.append(distance/dt)
     else:
         vg.append(0)
+    t_start = 0
+    t_end = 0
 
 #print(vg)
 print(average(vg))
@@ -147,7 +151,8 @@ for (t, r, s, a) in zip(time, ref, sig, angle):
         vg.append(distance/dt)
     else:
         vg.append(0)
+    t_start = 0
+    t_end = 0
 
-#print(vg)
 print(average(vg))
 print(deviation(vg))
