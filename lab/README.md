@@ -1,1 +1,0 @@
-Air-coupled ultrasonic nondestructive detection
