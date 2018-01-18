@@ -9,4 +9,4 @@ train-labels-idx1-ubyte.gz
 *.pdf
 submit.m
 lib
-token.mat
+*.mat
