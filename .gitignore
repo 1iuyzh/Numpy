@@ -1,13 +1,7 @@
 venv
 .vscode
 __pycache__
-test.py
-t10k-images-idx3-ubyte.gz
-t10k-labels-idx1-ubyte.gz
-train-images-idx3-ubyte.gz
-train-labels-idx1-ubyte.gz
 *.pdf
-submit.m
 lib
+submit.m
 *.mat
-*.asv
