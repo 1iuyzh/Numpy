@@ -11,6 +11,8 @@ y = tf.matmul(W, x_data) + b # tf.matmul 矩阵乘法
 
 # 策略
 loss = tf.reduce_mean(tf.square(y - y_data)) # tf.reduce_mean 求平均值
+
+# 算法
 optimizer = tf.train.GradientDescentOptimizer(0.5) # 梯度下降
 train = optimizer.minimize(loss)
 
