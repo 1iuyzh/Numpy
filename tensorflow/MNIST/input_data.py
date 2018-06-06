@@ -2,10 +2,10 @@ import struct
 import numpy as np
 import matplotlib.pyplot as plt
 
-train_images_idx3_ubyte = './tensorflow/MNIST/data/train-images.idx3-ubyte'
-train_labels_idx1_ubyte = './tensorflow/MNIST/data/train-labels.idx1-ubyte'
-test_images_idx3_ubyte = './tensorflow/MNIST/data/t10k-images.idx3-ubyte'
-test_lables_idx1_ubyte = './tensorflow/MNIST/data/t10k-labels.idx1-ubyte'
+train_images_idx3_ubyte = './dataset/MNIST/train-images.idx3-ubyte'
+train_labels_idx1_ubyte = './dataset/MNIST/train-labels.idx1-ubyte'
+test_images_idx3_ubyte = './dataset/MNIST/t10k-images.idx3-ubyte'
+test_lables_idx1_ubyte = './dataset/MNIST/t10k-labels.idx1-ubyte'
 
 # 解析idx文件
 def decode_idx_ubyte(path):
