@@ -4,6 +4,7 @@ test.py
 __pycache__
 submit.m
 *.mat
+*.asv
 *.pdf
 lib
 
