@@ -6,6 +6,7 @@ submit.m
 *.mat
 *.asv
 *.pdf
+*.png
 lib
 
 cifar-10-batches-py
