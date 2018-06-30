@@ -9,3 +9,4 @@ pip install --upgrade
 * numpy
 * scipy
 * matplotlib
+* [xgboost](https://xgboost.readthedocs.io/en/latest/build.html)
